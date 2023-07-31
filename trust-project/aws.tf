@@ -1,6 +1,15 @@
 # Copyright (c) HashiCorp, Inc.
 # SPDX-License-Identifier: MPL-2.0
 
+terraform {
+  cloud {
+    organization = "JustinTabbert-training"
+
+    workspaces {
+      name = "AWS-Trust-VBDC"
+    }
+  }
+}
 provider "aws" {
   region = var.aws_region
 }
